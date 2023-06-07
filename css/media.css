@@ -1,14 +1,99 @@
-@media (max-width: 1440px) {
+@media (max-width: 1340px) {
+  .container {
+    width: 85%;
+  }
 }
 
 @media (max-width: 1200px) {
+  #home .container section {
+    width: 45%;
+  }
+
+  #gallery .gallery-container {
+    height: 1440;
+    align-items: center;
+  }
 }
 
 @media (max-width: 992px) {
-}
+  header #home {
+    height: 100%;
+  }
 
-@media (max-width: 768px) {
+  #home .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 11rem;
+  }
+
+  #home .container section {
+    width: 100%;
+  }
+
+  #home .home__img {
+    order: 1;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  #home .home__text {
+    order: 2;
+    text-align: center;
+  }
+
+  #home .home__text--btns-box {
+    justify-content: center;
+  }
+  .home__text--btns-box .book {
+    border-radius: 4rem;
+  }
+
+  #chefs .chefs--gallery {
+    flex-wrap: wrap;
+  }
+  #chefs .chefs--gallery--item {
+    width: calc(100% / 2 - 1rem);
+  }
+
+  #gallery .gallery-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #gallery .gallery-item {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #contact .contact--container .contact--item {
+    width: 100%;
+  }
+
+  #contact form .group {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  #contact .group input {
+    width: 100%;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer .touch {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
+  #chefs .chefs--gallery--item {
+    width: 100%;
+  }
+
+  #home .home__text--btns-box {
+    flex-direction: column;
+  }
 }

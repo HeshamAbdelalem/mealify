@@ -45,10 +45,14 @@ h3 {
 }
 
 .container {
-  width: 85%;
+  width: 75%;
 
   margin: 0 auto;
   /* max-width: 1300px; */
+}
+
+textarea {
+  max-width: 100%;
 }
 
 ul {
@@ -65,6 +69,7 @@ a.btn--red {
   padding: 0.75rem 1.5rem;
   border-radius: 10rem;
   border-top-left-radius: 0;
+  transition: all 300ms ease-in-out;
 }
 
 .highlight-red {
@@ -188,6 +193,15 @@ header #home {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease-in-out;
+}
+
+.home__text--btns-box .half-red-ring:hover i {
+  color: var(--light-highlight);
+}
+
+.watch-container a:hover {
+  color: var(--light-highlight);
 }
 
 .home__img {
@@ -276,9 +290,7 @@ header #home {
 }
 
 #chefs .chefs--gallery--item {
-  /* border: 1rem solid transparent; */
-  border-radius: 1rem;
-  background-image: url('../images/');
+  border-radius: 0.5rem;
   background-color: var(--light-bg-white);
   position: relative;
   transition: all 300ms ease-in-out;
@@ -287,7 +299,7 @@ header #home {
 }
 
 #chefs .chefs--gallery--item .chef-img {
-  filter: grayscale(70%);
+  filter: grayscale(50%);
   transition: all 300ms ease-in-out;
   display: block;
 }
@@ -372,20 +384,24 @@ header #home {
 
 /* #Gallery Styles */
 
+#gallery {
+  background-color: var(--light-bg-grey);
+}
+
 #gallery .gallery-container {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   flex-direction: column;
   flex-wrap: wrap;
-  height: 1200px;
-  gap: 2rem;
-  max-width: 1300px;
+  max-width: 100%;
+  height: 73rem;
+  gap: 1rem;
 }
 
 #gallery .gallery-item {
   position: relative;
   overflow: hidden;
-  width: calc(95% / 3);
+  width: calc(95% / 3 - 1rem);
 }
 
 #gallery .gallery-item img {
@@ -427,16 +443,18 @@ header #home {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 2rem 0;
+  margin: 0 auto;
 }
 
 #contact .contact--item {
-  min-width: 49%;
+  width: 49%;
   display: flex;
-  gap: 1rem;
   align-items: center;
   padding: 1rem;
+  background-color: var(--light-bg-grey);
 }
 
 #contact .contact--item .title {
@@ -463,12 +481,15 @@ header #home {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 1rem;
 }
 
 #contact form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  box-shadow: 0px 0px 5px #ddd;
+  padding: 1rem;
 }
 
 #contact input,
@@ -478,12 +499,13 @@ textarea {
   outline: none;
   /* box-shadow: 0px 0px 1rem var(--light-bg-grey); */
   border: 1px solid #bbb;
+  transition: all 300ms ease-in-out;
 }
 
 #contact input:focus,
 textarea:focus {
   border-color: var(--light-highlight);
-  border-width: 0.125rem;
+  border-width: 0.1rem;
 }
 
 #contact form .group {
@@ -642,4 +664,20 @@ footer .container + div {
 .newsletter__list li::before {
   content: '\01F846';
   padding: 0 0.5rem;
+}
+
+.touch {
+  width: 25%;
+}
+.touch .touch--info {
+  /* padding: 1rem; */
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.touch--info i {
+  color: var(--light-highlight);
+  display: inline-block;
+  padding: 1rem;
 }
