@@ -13,6 +13,15 @@ font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: tomato;
+  color: #ddd;
+}
+
 :root {
   --light-bg-white: #ffffff;
   --light-bg-grey: #ededed;
@@ -36,7 +45,6 @@ a:link {
 body {
   font-family: var(--font-primary);
   /* letter-spacing: 0.1rem; */
-  --light-main-color: #37373f;
   color: var(--light-main-color);
 }
 h2,
@@ -126,11 +134,60 @@ a.btn--red {
   align-items: center;
 }
 
+.navbar__list li {
+  padding: 1rem;
+}
+
 .navbar__list--item a {
   display: inline-block;
   text-transform: capitalize;
   font-size: 1.1rem;
-  padding: 0.25rem 1.2rem;
+  padding: 0.25rem 0;
+  transition: all 300ms ease-in-out;
+  position: relative;
+}
+
+.navbar__list--item a:hover,
+.navbar__list--item a:active {
+  color: var(--light-main-color);
+}
+
+.navbar .navbar--btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar .navbar__hamburger--btn {
+  display: none;
+}
+
+#navbar__list {
+  color: var(--light-sec-color);
+}
+#navbar__list a::before {
+  content: '';
+  width: 0%;
+  height: 0.15rem;
+  background-color: var(--light-highlight);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+
+  /* left: 0; */
+}
+
+.navbar__list--close {
+  display: none;
+}
+
+body:has(#home:target) .home--a::before,
+body:has(#chefs:target) .chefs--a::before,
+body:has(#gallery:target) .navbar .gallery--a::before,
+body:has(#contact:target) .contact--a::before {
+  color: var(--light-main-color);
+  width: 100%;
 }
 
 /* #Header Styles */

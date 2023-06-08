@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/mode.css" />
     <title>Mealify</title>
   </head>
   <body>
@@ -24,14 +25,40 @@
           <h1 class="navbar__logo">
             <a href="#home">Mealify<span class="highlight-red">.</span></a>
           </h1>
-          <ul class="navbar__list">
-            <li class="navbar__list--item"><a href="#home">home</a></li>
-            <li class="navbar__list--item"><a href="#chefs">chefs</a></li>
-            <li class="navbar__list--item"><a href="#gallery">gallery</a></li>
-            <li class="navbar__list--item"><a href="#contact">contact</a></li>
+          <ul id="navbar__list" class="navbar__list">
+            <div class="navbar__list--close">
+              <a href="#home"><i class="fa-solid fa-xmark fa-xl"></i></a>
+            </div>
+            <li class="navbar__list--item">
+              <a href="#home" class="home--a">home</a>
+            </li>
+            <li class="navbar__list--item">
+              <a href="#chefs" class="chefs--a">chefs</a>
+            </li>
+            <li class="navbar__list--item">
+              <a href="#gallery" class="gallery--a">gallery</a>
+            </li>
+            <li class="navbar__list--item">
+              <a href="#contact" class="contact--a">contact</a>
+            </li>
           </ul>
-          <div class="navbar__modecontainer">
-            <button>mode</button>
+
+          <div class="navbar--btns">
+            <div class="navbar__modecontainer">
+              <label for="mode--btn" class="light--mode">
+                <i class="fa-regular fa-sun fa-xl"></i>
+              </label>
+              <label for="mode--btn" class="dark--mode">
+                <i class="fa-regular fa-moon fa-xl"></i>
+              </label>
+              <input type="checkbox" id="mode--btn" />
+            </div>
+
+            <div class="navbar__hamburger--btn">
+              <a href="#navbar__list">
+                <i class="fa-solid fa-bars fa-2x"></i>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
