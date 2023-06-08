@@ -139,3 +139,15 @@
     width: 100%;
   }
 }
+
+@media (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 12px;
+  }
+}
