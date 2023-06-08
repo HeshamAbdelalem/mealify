@@ -390,22 +390,23 @@ header #home {
 
 #gallery .gallery-container {
   display: flex;
-  /* justify-content: flex-start; */
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 100%;
-  height: 73rem;
+  height: 75rem;
   gap: 1rem;
 }
 
 #gallery .gallery-item {
   position: relative;
   overflow: hidden;
-  width: calc(95% / 3 - 1rem);
+  height: auto;
+  width: calc(100% / 3 - 2rem);
+  border: 0.25rem solid var(--light-bg-white);
 }
 
 #gallery .gallery-item img {
-  height: 100%;
+  /* height: 100%; */
+  display: block;
   transition: all 300ms ease-in-out;
 }
 

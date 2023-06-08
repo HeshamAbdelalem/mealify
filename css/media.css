@@ -10,8 +10,12 @@
   }
 
   #gallery .gallery-container {
-    height: 1440;
+    height: 845px;
     align-items: center;
+  }
+
+  #gallery .gallery-container .gallery-item {
+    /* width: 25%; */
   }
 }
 
@@ -57,13 +61,13 @@
   }
 
   #gallery .gallery-container {
-    flex-direction: column;
-    height: auto;
+    /* flex-direction: column; */
+    height: 1500px;
   }
 
-  #gallery .gallery-item {
-    width: 100%;
-    flex-direction: column;
+  #gallery .gallery-container .gallery-item {
+    width: calc(100% / 2 - 2rem);
+    /* flex-direction: column; */
   }
 
   #contact .contact--container .contact--item {
@@ -95,5 +99,12 @@
 
   #home .home__text--btns-box {
     flex-direction: column;
+  }
+
+  #gallery .gallery-container {
+    height: auto;
+  }
+  #gallery .gallery-container .gallery-item {
+    width: 100%;
   }
 }
