@@ -139,6 +139,7 @@ a.btn--red {
 .navbar__list {
   display: flex;
   align-items: center;
+  transition: all 300ms ease-in-out;
 }
 
 .navbar__list li {

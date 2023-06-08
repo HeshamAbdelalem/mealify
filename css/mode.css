@@ -24,7 +24,7 @@ body:has(#mode--btn:checked) .light--mode {
   --light-bg-white: #171717;
   --light-bg-grey: #252525;
   --light-highlight: #c17e1f;
-  --light-main-color: #fff;
+  --light-main-color: #ffffff;
   --light-sec-color: #7f7f90;
 
   --dark-bg-dark: #000000;
@@ -36,14 +36,23 @@ body:has(#mode--btn:checked) #contact {
   color: var(--light-main-color);
 }
 
-body:has(#mode--btn:checked) #chefs .showcase p,
-body:has(#mode--btn:checked).contact--container {
-  color: #fff !important;
+body:has(#mode--btn:checked) #gallery .gallery-container .showcase p,
+body:has(#mode--btn:checked) .contact--container .info p {
+  color: var(--light-main-color);
+  text-align: center;
 }
 
-body:has(#mode--btn:checked) #chefs .chefs--gallery--item img {
-  box-shadow: 0px 0px 5px #858585;
-  border: 2px solid #fff;
+body:has(#mode--btn:checked) #gallery .gallery-item {
+  border-color: var(--light-main-color);
+}
+
+body:has(#mode--btn:checked) #chefs .chefs--gallery--item {
+  box-shadow: 0px 0px 1px #000;
+  border: 1px solid #000;
+}
+
+body:has(#mode--btn:checked) #chefs .img-container::after {
+  background-image: url('../images/team-shape-dark.svg');
 }
 
 body:has(#mode--btn:checked) footer {
