@@ -17,6 +17,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  background-color: #000000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ededed;
+}
 ::selection {
   background-color: tomato;
   color: #ddd;
